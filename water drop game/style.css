@@ -1,0 +1,97 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f9ff;
+  color: #333;
+}
+
+/* Header & Branding */
+header {
+  background-color: #fdd835; /* Charity: water yellow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  width: 50px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+  color: #222;
+}
+
+/* Main Game Layout */
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+.score-timer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#gameArea {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid #fdd835;
+  background-color: #e0f7fa;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Drop Style */
+.drop {
+  position: absolute;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* Button */
+#resetButton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #fdd835;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+  background-color: #fbc02d;
+}
+
+/* Message Style */
+.message {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  #gameArea {
+    width: 90%;
+    height: 350px;
+  }
+
+  .score-timer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
