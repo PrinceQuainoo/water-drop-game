@@ -1,13 +1,11 @@
-/* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f9ff;
   color: #333;
 }
 
-/* Header & Branding */
 header {
   background-color: #fdd835; /* Charity: water yellow */
   display: flex;
@@ -26,9 +24,9 @@ header h1 {
   font-size: 2em;
   margin: 0;
   color: #222;
+  font-weight: 700;
 }
 
-/* Main Game Layout */
 main {
   text-align: center;
   padding: 20px;
@@ -39,6 +37,11 @@ main {
   justify-content: space-around;
   font-size: 1.2em;
   margin-bottom: 15px;
+}
+
+.difficulty-select {
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
 #gameArea {
@@ -52,15 +55,18 @@ main {
   border-radius: 10px;
 }
 
-/* Drop Style */
 .drop {
   position: absolute;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 32px;
   user-select: none;
+  transition: transform 0.1s;
 }
 
-/* Button */
+.drop:active {
+  transform: scale(1.2);
+}
+
 #resetButton {
   margin-top: 15px;
   padding: 10px 20px;
@@ -76,20 +82,42 @@ main {
   background-color: #fbc02d;
 }
 
-/* Message Style */
 .message {
   margin-top: 15px;
   font-size: 1.1em;
   color: green;
 }
 
-/* Responsive Design */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 18px 0 8px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-links a {
+  color: #fdd835;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 6px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 0.9em;
+  margin-top: 7px;
+  color: #bbb;
+}
+
 @media (max-width: 400px) {
   #gameArea {
     width: 90%;
     height: 350px;
   }
-
   .score-timer {
     flex-direction: column;
     gap: 10px;
